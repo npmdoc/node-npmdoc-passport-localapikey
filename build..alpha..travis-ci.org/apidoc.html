@@ -1,0 +1,417 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/cholalabs/passport-localapikey#readme"
+
+    >passport-localapikey (v0.0.3)</a>
+</h1>
+<h4>Local api key authentication strategy for Passport.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-localapikey">module passport-localapikey</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.BadRequestError">
+            function <span class="apidocSignatureSpan">passport-localapikey.</span>BadRequestError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.Strategy">
+            function <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.Strategy.super_">
+            function <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">passport-localapikey.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-localapikey.Strategy">module passport-localapikey.Strategy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.Strategy.Strategy">
+            function <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.Strategy.super_">
+            function <span class="apidocSignatureSpan">passport-localapikey.Strategy.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-localapikey.Strategy.prototype">module passport-localapikey.Strategy.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.Strategy.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-localapikey.Strategy.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-localapikey.Strategy.super_">module passport-localapikey.Strategy.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.Strategy.super_.super_">
+            function <span class="apidocSignatureSpan">passport-localapikey.Strategy.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-localapikey.Strategy.super_.prototype">module passport-localapikey.Strategy.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-localapikey.Strategy.super_.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-localapikey.Strategy.super_.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-localapikey" id="apidoc.module.passport-localapikey">module passport-localapikey</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.BadRequestError" id="apidoc.element.passport-localapikey.BadRequestError">
+        function <span class="apidocSignatureSpan">passport-localapikey.</span>BadRequestError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BadRequestError(message) {
+  Error.call(this);
+  Error.captureStackTrace(this, arguments.callee);
+  this.name = &#x27;BadRequestError&#x27;;
+  this.message = message || null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.Strategy" id="apidoc.element.passport-localapikey.Strategy">
+        function <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  if (typeof options == &#x27;function&#x27;) {
+    verify = options;
+    options = {};
+  }
+  if (!verify) throw new Error(&#x27;local authentication strategy requires a verify function&#x27;);
+
+  this._apiKeyField = options.apiKeyField || &#x27;apikey&#x27;;
+
+  passport.Strategy.call(this);
+  this.name = &#x27;localapikey&#x27;;
+  this._verify = verify;
+  this._passReqToCallback = options.passReqToCallback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.Strategy.super_" id="apidoc.element.passport-localapikey.Strategy.super_">
+        function <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-localapikey.Strategy" id="apidoc.module.passport-localapikey.Strategy">module passport-localapikey.Strategy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.Strategy.Strategy" id="apidoc.element.passport-localapikey.Strategy.Strategy">
+        function <span class="apidocSignatureSpan">passport-localapikey.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  if (typeof options == &#x27;function&#x27;) {
+    verify = options;
+    options = {};
+  }
+  if (!verify) throw new Error(&#x27;local authentication strategy requires a verify function&#x27;);
+
+  this._apiKeyField = options.apiKeyField || &#x27;apikey&#x27;;
+
+  passport.Strategy.call(this);
+  this.name = &#x27;localapikey&#x27;;
+  this._verify = verify;
+  this._passReqToCallback = options.passReqToCallback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.Strategy.super_" id="apidoc.element.passport-localapikey.Strategy.super_">
+        function <span class="apidocSignatureSpan">passport-localapikey.Strategy.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-localapikey.Strategy.prototype" id="apidoc.module.passport-localapikey.Strategy.prototype">module passport-localapikey.Strategy.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.Strategy.prototype.authenticate" id="apidoc.element.passport-localapikey.Strategy.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-localapikey.Strategy.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  options = options || {};
+  var apikey = lookup(req.body, this._apiKeyField) || lookup(req.query, this._apiKeyField);
+
+  if (!apikey) {
+    return this.fail(new BadRequestError(options.badRequestMessage || &#x27;Missing API Key&#x27;));
+  }
+
+  var self = this;
+
+  function verified(err, user, info) {
+    if (err) { return self.error(err); }
+    if (!user) { return self.fail(info); }
+    self.success(user, info);
+  }
+
+  if (self._passReqToCallback) {
+    this._verify(req, apikey, verified);
+  } else {
+    this._verify(apikey, verified);
+  }
+
+  function lookup(obj, field) {
+    if (!obj) { return null; }
+    var chain = field.split(&#x27;]&#x27;).join(&#x27;&#x27;).split(&#x27;[&#x27;);
+    for (var i = 0, len = chain.length; i &#x3c; len; i++) {
+      var prop = obj[chain[i]];
+      if (typeof(prop) === &#x27;undefined&#x27;) { return null; }
+      if (typeof(prop) !== &#x27;object&#x27;) { return prop; }
+      obj = prop;
+    }
+    return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  {
+    &#x22;name&#x22;: &#x22;sudhakarmani&#x22;,
+    &#x22;email&#x22;: &#x22;mail4sudhakar@gmail.com&#x22;
+  }
+],
+&#x22;name&#x22;: &#x22;passport-localapikey&#x22;,
+&#x22;optionalDependencies&#x22;: {},
+&#x22;readme&#x22;: &#x22;# Passport-LocalAPIKey\n\n[Passport](http://passportjs.org/) strategy for authenticating with a apikey
+.\n\nThis module lets you authenticate using a apikey in your Node.js\napplications which is used to build rest apis.By plugging into Passport, local apikey authentication can be easily and\nunobtrusively integrated into any application or framework that supports\n[Connect](http://www.senchalabs.org/connect/)-style middleware, including\n[Express](http://expressjs.com/).\n\n## Installation\n\n    $ npm install passport-localapikey\n\n## Usage\n\n#### Configure Strategy\n\nThe local api key authentication strategy authenticates users using a apikey.  \nThe strategy requires a `verify` callback, which accepts these\ncredentials and calls `done` providing a user.\n\n    passport.use(new LocalAPIKeyStrategy(\n      function(apikey, done) {\n        User.findOne({ apikey: apikey }, function (err, user) {\n          if (err) { return done(err); }\n          if (!user) { return done(null, false); }\n          return done(null, user);\n        });\n      }\n    ));\n\n#### Authenticate Requests\n\nUse `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;localapikey&#x27;` strategy, to\nauthenticate requests.\n\nFor example, as route middleware in an [Express](http://expressjs.com/)\napplication:\n\n    app.post(&#x27;/api/authenticate&#x27;, \n      passport.authenticate(&#x27;localapikey&#x27;, { failureRedirect: &#x27;/api/unauthorized&#x27; }),\n      function(req, res) {\n        res.json({ message: \&#x22;Authenticated\&#x22; })\n      });\n\n## Examples\n\n    curl -v -d \&#x22;apikey=asdasjsdgfjkjhg\&#x22; http://127.0.0.1:3000/api/authenticate\n\n## Tests\n\n    $ npm install --dev\n    $ make test\n\n[![Build Status](https://secure.travis-ci.org/cholalabs/passport-localapikey.png)](http://travis-ci.org/cholalabs/passport-localapikey)\n\n## Credits\n\n  - [Sudhakar Mani](http://twitter.com/sudhakarmani)\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2012 Sudhakar Mani\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \&#x22;Software\&#x22;), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \&#x22;AS IS\&#x22;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n&#x22;,
+&#x22;repository&#x22;: {
+  &#x22;type&#x22;: &#x22;git&#x22;,
+  &#x22;url&#x22;: &#x22;git://github.com/cholalabs/passport-localapikey.git&#x22;
+},
+&#x22;scripts&#x22;: {
+  &#x22;test&#x22;: &#x22;NODE_PATH=lib node_modules/.bin/vows test/*-test.js&#x22;
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-localapikey.Strategy.super_" id="apidoc.module.passport-localapikey.Strategy.super_">module passport-localapikey.Strategy.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.Strategy.super_.super_" id="apidoc.element.passport-localapikey.Strategy.super_.super_">
+        function <span class="apidocSignatureSpan">passport-localapikey.Strategy.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-localapikey.Strategy.super_.prototype" id="apidoc.module.passport-localapikey.Strategy.super_.prototype">module passport-localapikey.Strategy.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-localapikey.Strategy.super_.prototype.authenticate" id="apidoc.element.passport-localapikey.Strategy.super_.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-localapikey.Strategy.super_.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  throw new Error(&#x27;Strategy#authenticate must be overridden by subclass&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  {
+    &#x22;name&#x22;: &#x22;sudhakarmani&#x22;,
+    &#x22;email&#x22;: &#x22;mail4sudhakar@gmail.com&#x22;
+  }
+],
+&#x22;name&#x22;: &#x22;passport-localapikey&#x22;,
+&#x22;optionalDependencies&#x22;: {},
+&#x22;readme&#x22;: &#x22;# Passport-LocalAPIKey\n\n[Passport](http://passportjs.org/) strategy for authenticating with a apikey
+.\n\nThis module lets you authenticate using a apikey in your Node.js\napplications which is used to build rest apis.By plugging into Passport, local apikey authentication can be easily and\nunobtrusively integrated into any application or framework that supports\n[Connect](http://www.senchalabs.org/connect/)-style middleware, including\n[Express](http://expressjs.com/).\n\n## Installation\n\n    $ npm install passport-localapikey\n\n## Usage\n\n#### Configure Strategy\n\nThe local api key authentication strategy authenticates users using a apikey.  \nThe strategy requires a `verify` callback, which accepts these\ncredentials and calls `done` providing a user.\n\n    passport.use(new LocalAPIKeyStrategy(\n      function(apikey, done) {\n        User.findOne({ apikey: apikey }, function (err, user) {\n          if (err) { return done(err); }\n          if (!user) { return done(null, false); }\n          return done(null, user);\n        });\n      }\n    ));\n\n#### Authenticate Requests\n\nUse `passport.<span class="apidocCodeKeywordSpan">authenticate</span>()`, specifying the `&#x27;localapikey&#x27;` strategy, to\nauthenticate requests.\n\nFor example, as route middleware in an [Express](http://expressjs.com/)\napplication:\n\n    app.post(&#x27;/api/authenticate&#x27;, \n      passport.authenticate(&#x27;localapikey&#x27;, { failureRedirect: &#x27;/api/unauthorized&#x27; }),\n      function(req, res) {\n        res.json({ message: \&#x22;Authenticated\&#x22; })\n      });\n\n## Examples\n\n    curl -v -d \&#x22;apikey=asdasjsdgfjkjhg\&#x22; http://127.0.0.1:3000/api/authenticate\n\n## Tests\n\n    $ npm install --dev\n    $ make test\n\n[![Build Status](https://secure.travis-ci.org/cholalabs/passport-localapikey.png)](http://travis-ci.org/cholalabs/passport-localapikey)\n\n## Credits\n\n  - [Sudhakar Mani](http://twitter.com/sudhakarmani)\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2012 Sudhakar Mani\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \&#x22;Software\&#x22;), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \&#x22;AS IS\&#x22;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n&#x22;,
+&#x22;repository&#x22;: {
+  &#x22;type&#x22;: &#x22;git&#x22;,
+  &#x22;url&#x22;: &#x22;git://github.com/cholalabs/passport-localapikey.git&#x22;
+},
+&#x22;scripts&#x22;: {
+  &#x22;test&#x22;: &#x22;NODE_PATH=lib node_modules/.bin/vows test/*-test.js&#x22;
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
